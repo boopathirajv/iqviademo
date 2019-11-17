@@ -1,0 +1,174 @@
+.cls_serviceListCont .cls_Header i {
+    font-size: 45px;
+    height: auto;
+    /* margin: 30px; */
+}
+
+.cls_serviceListCont .cls_Header {
+    height: auto;
+    vertical-align: middle;
+    display: inline-block;
+    margin-bottom: 0px;
+    width: 100%;
+}
+span.cls_iconCont {
+    padding: 0px 10px;
+}
+.cls_btnCont .input-group {   
+    display: inline-block;
+    margin: 10px;
+}
+.cls_serviceListCont .cls_textCont {
+   display: flex;
+   align-items: center;
+}
+.cls_SubHeader .cls_textCont {
+    width: 100%;
+    background: #b0dee8;
+}
+.cls_textCont span {
+    margin: 10px;
+}
+
+.cls_ServiceContent {
+    display: inline-block;
+    width: 89%;
+}
+
+.cls_ServiceList {
+    padding: 10px;
+    display: flex;
+}
+
+.cls_ServiceListCont,.cls_ServiceTime {
+    clear: both;
+    text-align: left;
+}
+
+.cls_ServiceIdCont {
+    width: 10%;
+    display: inline-block;
+    padding: 10px;
+    margin: 0px 10px;
+}
+
+.cls_ServiceUnitCont div {
+    padding-right: 10px;
+    float: left;
+    width: 20%;
+}
+.cls_ServiceIdValue {
+    padding: 10px 15px;
+}
+.cls_ServiceUnitCont i {
+    padding-right: 5px;
+}
+.cls_ServiceUnitCont .cls_ServiceEdit, .cls_ServiceUnitCont .cls_ServiceDelete {
+    width: 45%;
+}
+
+i.fa.fa-times-circle {
+    color: #616161;
+}
+
+.input-group.cls_star .input-group-addon {
+    border-radius: 50%;
+    background: #04a9f4;
+    height: 41px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+i.fa.fa-star {
+    font-size: 25px;
+    color: #fff;
+}
+
+i.fa.fa-save {
+    color: #fff;
+    font-size: 20px;
+}
+
+.input-group.cls_save span.input-group-addon {
+    border-radius: 50%;
+    background: #1565c0;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+}
+i.fa.fa-bell-o {
+    font-size: 18px;
+}
+.input-group.cls_noticount {
+    border-radius: 50%;
+    background: red;
+    height: 20px;
+    border: 0px;
+    margin: 20px 0px;
+}
+.input-group.cls_bell
+{
+	    margin: 25px 10px 0px 5px;
+    width: 15px !important;
+}
+i.fa.fa-empire {
+    font-size: 40px;
+}
+.cls_ServiceUnitCont .cls_ActionCont
+{
+    float: right;
+    width: 12%;
+}
+.cls_iconCont input {
+    width: 30px;
+    height: 30px;
+}
+.cls_ServiceIdInput input {
+    width: 20px;
+    height: 20px;
+}
+.cls_SubHeader span.cls_iconCont {
+    margin-top: 16px;
+}
+.cls_input {
+    height: 30px;
+    width: 30px;
+    border: 3px solid;
+    display: block;
+    padding: 0px;
+    margin: 0px !important;
+}
+.cls_ServiceIdInput .cls_input
+{
+    border: 1px solid #379ff4;
+}
+
+
+@media only screen and (min-width: 0px) and (max-width: 767px)
+{
+    .cls_ServiceIdCont {
+        width: 20%;
+    }
+    
+    .cls_ServiceContent {
+        width: 75%;
+    }
+    
+    .cls_ServiceUnitCont div {
+        width: 33%;
+    }
+    
+    .cls_ServiceUnitCont .cls_ActionCont {
+        clear: both;
+        float: none;
+        width: 100%;
+    }
+    
+    .cls_ServiceUnitCont .cls_ServiceEdit, .cls_ServiceUnitCont .cls_ServiceDelete {
+        width: 30px;
+    }
+}

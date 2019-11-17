@@ -1,0 +1,88 @@
+.cls_row {
+    width: 100%;
+    clear: both;
+}
+.cls_column {
+    /* display: inline-block; */
+    float: left;
+    width: 14%;
+    margin: 25px 1%;
+}
+
+.cls_column input, .cls_column select {
+    width: 100%;
+    -webkit-appearance: none;
+    border-width: 0px 0px 1px 0px;
+    border-color: #ccc;
+    outline: none;
+}
+.cls_column select
+{
+    -webkit-appearance: menulist-button;
+}
+.cls_nameCont input[type="text"]
+{
+    border-color: #f37373;
+}
+.cls_column .custom-switch {
+    border-bottom: 1px solid #ccc;
+    padding-left: 0px;
+    padding-bottom: 3px;
+}
+span.input-group-addon {
+    float: right;
+}
+
+.cls_column.cls_search input {
+    width: 75%;
+    border: 0px;
+}
+
+.cls_column.cls_search {
+    border-width: 0px 0px 1px 0px;
+    border-color: #ccc;
+    border-style: solid;
+    text-align: left;
+}
+
+/* header button css */
+.cls_btnCont 
+{
+    float: right;
+}
+.cls_btnCont input.form-control {
+    width: 15px !important;
+    height: 19px;
+    float: left;
+    background: none;
+    position: absolute;
+    padding: 0px;
+    top: 3px;
+    border: 0px;
+}
+.cls_btnCont .input-group {
+    width: 30px !important;
+    float: left;
+}
+.cls_btnCont i.fa.fa-plus-square {
+    pointer-events: none;
+    color: #7bbb5e;
+}
+.cls_btnCont i.fa.fa-refresh {
+    color: #7ea8c4;
+}
+form .cls_Header {
+    width: 100%;
+    background: #f3f3f3;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+
+
+@media screen and (min-width: 0px) and (max-width: 767px){
+    .cls_column {
+        width: 90%;
+        margin: 25px 5%;
+        float: none;
+    }    
+}

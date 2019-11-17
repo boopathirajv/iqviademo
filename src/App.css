@@ -1,22 +1,16 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
+.cls_naviCont {
+  height: 50px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.cls_naviCont li{
+  display: inline-block;
+  padding: 10px;
 }
-
-.App-link {
-  color: #09d3ac;
+.cls_naviCont ul
+{
+  margin: 0px !important;
+}
+.cls_naviCont a
+{
+  text-decoration: underline;
 }
