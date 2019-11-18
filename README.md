@@ -1,5 +1,31 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Completed Task: 
+
+Next to kin:
+
+1. UI is completed for responsive and dynamic
+2. Data is loaded from static json. 
+3. functionalities:
+	search function
+	reset 
+	submit
+	onchange event for each input
+	
+Duplicate check:
+
+1. UI is completed for responsive and dynamic
+2. Data is loaded from static json. 
+3. functionalities:
+	page navigate to services page star and hand symbol click
+
+Services:
+
+1. UI is completed for responsive and dynamic
+2. Data is loaded from static json. 
+3. Delete functionality is completed
+
+
 ## Available Scripts
 
 In the project directory, you can run:
