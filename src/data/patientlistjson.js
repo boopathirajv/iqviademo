@@ -7,8 +7,8 @@ const list =
     "surname": "pachan",
     
     "contact": "9865432134",
-    "dob": "13/05/1985 34 years"   
-    
+    "dob": "13/05/1985 34 years",
+	"status": "alive" 
 },
 {"id":"2221900657",
     "fname": "vijay",

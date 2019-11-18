@@ -77,6 +77,12 @@
 .cls_patient_list_cont .cls_textCont {
     padding-top: 10px;
 }
+.cls_patientList.cls_outPatient .cls_DescCont, .cls_patientList.cls_outPatient .cls_DescValue i {
+    color: red;
+}
+.cls_pointIcon {
+    overflow: hidden;
+}
 @media screen and (min-width: 0px) and (max-width: 767px){
     .cls_patientList {
         width: 100%;

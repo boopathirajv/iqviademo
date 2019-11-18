@@ -8,17 +8,20 @@ class PatientList extends Component {
   this.state = {
     data: list,
   }
-    }
+}
   
-
+  navigateService = (id) =>
+  {
+	window.location.href = "/services?id=" + id;
+ }
   render() {
     const { data } = this.state
 
     const result = data.map((entry, index) => {
       return (
-      <div className="cls_patientList">
+      <div className={'cls_patientList ' + (entry.status != 'alive'? 'cls_outPatient':'')}>
         <div className="personCont">
-            <div className="cls_pointIcon"><i class="fa fa-star-o fa-6" aria-hidden="true"></i></div>
+            <div className="cls_pointIcon" onClick={() => this.navigateService(entry.id)}><i class={'fa '+ (entry.status != 'alive'? 'fa-hand-pointer-o':' fa-star-o fa-6')} aria-hidden="true"></i></div>
             <div className="cls_PersonIcon"><i class="fa fa-user-circle" aria-hidden="true"></i></div>    
             <div className="cls_DescValue">{entry.id} - [{entry.fname}]</div>
         </div>
