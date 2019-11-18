@@ -148,7 +148,8 @@ class Form extends Component {
     });
   }
   submitForm = () => {
-    window.open("/list?id=" + this.state.relMRN);
+	window.location.href = "/list?id=" + this.state.relMRN;
+    
     this.setState(this.initialState)
   }
   resetClick = (event) => {
