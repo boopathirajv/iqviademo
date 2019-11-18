@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import './form.css';
-import relationList from './data/relationData';
-import idTypeList from './data/IDTypeData';
-import contactTypeList from './data/ContactTypeData';
-import mrnList from './data/MRNListData';
+import '../css/form.css';
+import relationList from '../data/relationData';
+import idTypeList from '../data/IDTypeData';
+import contactTypeList from '../data/ContactTypeData';
+import mrnList from '../data/MRNListData';
 
 const RenderHeader = props =>{
     return(

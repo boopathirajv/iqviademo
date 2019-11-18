@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
-import UserForm from './userForm';
-import PatientList from './PatientList';
-import Services from './Services';
+import UserForm from './components/userForm';
+import PatientList from './components/PatientList';
+import Services from './components/Services';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 

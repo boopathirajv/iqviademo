@@ -1,6 +1,6 @@
 import React from 'react';
 import { Component } from 'react';
-import serviceList from "./ServiceListData.js";
+import serviceList from "../data/ServiceListData.js";
 import ServiceInfoList from "./ServiceInfoList";
 class Services extends Component
 {

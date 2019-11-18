@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import list from './patientlistjson.js';
-import './PersonList.css';;
+import list from '../data/patientlistjson.js';
+import '../css/PersonList.css';;
 class PatientList extends Component {
     constructor(props) {
         super(props)
