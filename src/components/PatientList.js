@@ -10,8 +10,8 @@ class PatientList extends Component {
   }
 }
   
-  navigateService = (id) =>
-  {
+ navigateService = (id) =>
+ {
 	window.location.href = "/services?id=" + id;
  }
   render() {

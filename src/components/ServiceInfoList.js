@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '../css/ServiceList.css';
-const ServiceTableHeader = () => {
+const ServiceTableHeader = props => {
     return (
         
         <div class="cls_Header">
@@ -13,14 +13,14 @@ const ServiceTableHeader = () => {
                 <div class="input-group cls_bell">
                     <span class="input-group-addon"><i class="fa fa-bell-o"></i></span>  
                 </div>
-                <div class="input-group cls_remove">
+                <div class="input-group cls_remove" onClick={props.removeMultipleServiceList}>
                     <span class="input-group-addon"><i class="fa fa-times-circle"></i></span>
                 </div>
                 
-                <div class="input-group cls_star">
+                <div class="input-group cls_star" onClick={props.starAction}>
                   <span class="input-group-addon"><i class="fa fa-star"></i></span>
                 </div>
-                <div class="input-group cls_save">
+                <div class="input-group cls_save" onClick={props.saveAction}>
                     <span class="input-group-addon"><i class="fa fa-save"></i></span>
                 </div>
                 
@@ -30,18 +30,17 @@ const ServiceTableHeader = () => {
     )
   }
 
-const SubHeader = () => {
+const SubHeader = props => {
     return(
-        <div class="cls_SubHeader"> <div class="cls_textCont"><span class="cls_iconCont"><span className="cls_input" ></span></span><span>Service(s)</span></div></div>
+        <div class="cls_SubHeader"> <div class="cls_textCont"><span class="cls_iconCont" onClick={props.selectedAllcbk}><span className="cls_input" ><i class="fa fa-check" aria-hidden="true"></i></span></span><span>Service(s)</span></div></div>
     )
 }
-
 const  ServiceListDom = props => {
     const rows = props.serviceList.map((row, index) => {
       return (
         <div className="cls_ServiceList" key={index}>
            <div className="cls_ServiceIdCont" key={index}>
-            <div className="cls_ServiceIdInput"><div className="cls_input" key={index}></div></div>
+            <div className={'cls_ServiceIdInput '+(row.selected == true ? 'selected':'')} onClick={(event) => props.selectedItemcbk(index,event)} ><div className="cls_input" key={index}><i class="fa fa-check" aria-hidden="true"></i></div></div>
             <div className="cls_ServiceIdValue">{row.id}</div>
           </div>   
           <div className="cls_ServiceContent" key={index}>
@@ -66,15 +65,15 @@ const  ServiceListDom = props => {
 
 
 class ServiceInfoList extends Component {
-
+  
   render() {
-    const { serviceList, removeServiceList } = this.props
-
+    const { serviceList, removeServiceList,selectedItemcbk,selectedAllcbk,removeMultipleServiceList,saveAction,starAction } = this.props
+    
     return (
       <div className="cls_serviceListCont">
-        <ServiceTableHeader/>
-        <SubHeader/>
-        <ServiceListDom serviceList={serviceList} removeServiceList={removeServiceList}/>
+        <ServiceTableHeader removeMultipleServiceList={removeMultipleServiceList}  saveAction={saveAction} starAction={starAction}/>
+        <SubHeader  selectedAllcbk={selectedAllcbk}/>
+        <ServiceListDom serviceList={serviceList} removeServiceList={removeServiceList} selectedItemcbk={selectedItemcbk}/>
       </div>
         
     )

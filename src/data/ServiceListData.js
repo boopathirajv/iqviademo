@@ -5,7 +5,8 @@ const serviceList = [
         "testCount": 1,
         "unit1": 2155.00,
         "unit2": 2155.00,
-        "time": "24/05/2019 12:11 PM"
+        "time": "24/05/2019 12:11 PM",
+        "selected": false
     },
     {
         id:"93625",
@@ -13,7 +14,8 @@ const serviceList = [
         "testCount": 1,
         "unit1": 155.00,
         "unit2": 155.00,
-        "time": "24/05/2019 12:11 PM"
+        "time": "24/05/2019 12:11 PM",
+        "selected": false
     }
 ]
 export default serviceList;

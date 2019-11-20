@@ -4,8 +4,7 @@ const list =
     "fname": "vijay",
     "mname":"josh",
     "lname": "sekar",
-    "surname": "pachan",
-    
+    "surname": "pachan",    
     "contact": "9865432134",
     "dob": "13/05/1985 34 years",
 	"status": "alive" 
@@ -15,7 +14,6 @@ const list =
     "mname":"josh",
     "lname": "sekar",
     "surname": "pachan",
-    
     "contact": "9865432134",
     "dob": "13/05/1985 34 years"   
     

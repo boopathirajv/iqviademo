@@ -46,12 +46,12 @@ const RenderInputDom = props => {
 
 const RenderSearch = props => {
    return (
-        <div className="cls_column cls_search">
+        <div className="cls_searchInputCont">
             <input required type="text" name={props.name} value={props.value} onChange={props.onChange} placeholder={props.placeholder} />
             <span className="input-group-addon">
              <i className="fa fa-search"></i>
           </span>
-          { props.showResults ? <RenderMRNList mrnList={mrnList} onClick={props.searchValClick}/> : null}
+          
         </div>
     )
 }
@@ -73,7 +73,7 @@ const RenderMRNList = props => {
       return (
         <ul className="list-group">
         {
-          props.mrnList.map(function(item,key) {
+          props.mrnListItem && props.mrnListItem.map(function(item,key) {
             return <li className="list-group-item" value={item.id} onClick={() => props.onClick(item.id)}>{item.id}</li>
           })
          }
@@ -102,7 +102,7 @@ class Form extends Component {
       contact: '',
       address: "",
       isEmergency: true,
-      mrnList: this.initialmrnList,
+      mrnListItem: [],
       showResults: false 
       
     }
@@ -111,17 +111,29 @@ class Form extends Component {
   }
   searchEvent = event => {
    
-    
-    const{ mrnList1 } = this.initialmrnList && this.initialmrnList.filter(function(item){
-    return item.id.toLowerCase().search(
-      event.target.value.toLowerCase()) !== -1;
-  });
-  this.setState({
-    relMRN: event.target.value,
-    mrnList: mrnList1,
-    showResults:true
-    });
-}
+    if(event.target.value != "")
+    {
+      const mrnList1 = this.initialmrnList && this.initialmrnList.filter(function(item){
+      return item.id.indexOf(
+        event.target.value) !== -1;
+      });
+      console.log(mrnList1);
+      this.setState({
+        relMRN: event.target.value,
+        mrnListItem: mrnList1?mrnList1:[],
+        showResults:mrnList1?true:false
+        });
+    }
+    else{
+      this.setState({
+        relMRN: event.target.value,
+        mrnListItem: [],
+        showResults:false
+        });
+    }
+
+      
+  }
   handleChange = event => {
     const { name, value } = event.target
   
@@ -170,7 +182,10 @@ class Form extends Component {
             <RenderHeader submitClick={this.submitForm} resetClick={this.resetClick}/>
             <div className="cls_row">
                 <RenderRelationDom relType={relType}  defaultValue="Relation Type" relationList={this.relationList} onChange={this.relOptChange}/>
-                <RenderSearch showResults={this.state.showResults} name="relMRN" value={relMRN} searchValClick={this.searchValClick} onChange={this.searchEvent} placeholder="Relation MRN" />
+                <div className="cls_column cls_search">
+                  <RenderSearch  name="relMRN" value={relMRN} onChange={this.searchEvent} placeholder="Relation MRN" />
+                  { this.state.showResults ? <RenderMRNList mrnListItem={this.state.mrnListItem} onClick={this.searchValClick}/> : null}
+                </div>
                 <RenderInputDom  name="fname" value={fname} onChange={this.handleChange} placeholder="First Name" extraClassName="cls_nameCont"/>
                 <RenderInputDom  name="sname" value={sname} onChange={this.handleChange} placeholder="Middle Name" extraClassName="cls_nameCont"/>
                 <RenderInputDom name="lname" value={lname} onChange={this.handleChange} placeholder="Third Name"  extraClassName="cls_nameCont"/>

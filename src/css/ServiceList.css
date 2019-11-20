@@ -141,12 +141,22 @@ i.fa.fa-empire {
     display: block;
     padding: 0px;
     margin: 0px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .cls_ServiceIdInput .cls_input
 {
     border: 1px solid #379ff4;
 }
-
+.fa-check
+{
+    display: none;
+}
+.cls_ServiceIdInput.selected .fa-check, .cls_iconCont.selected .fa-check
+{
+    display: block;
+}
 
 @media only screen and (min-width: 0px) and (max-width: 767px)
 {
